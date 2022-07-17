@@ -16,3 +16,31 @@ body {
   border-radius: 8px;
   padding: 20px;
 }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+[class^="card-"] {
+  border: 2px solid gray;
+  border-radius: 4px;
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-1 img {
+  width: 65px;
+}
+
+.card-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
