@@ -32,7 +32,7 @@ let print_result = (res) => {
   }</h4>
     <div class="cards">
       <div class="card-1">
-        <img src=""http://openweathermap.org/img/wn/${weather
+        <img src="http://openweathermap.org/img/wn/${weather
           .filter((x, y) => y === 0)
           .map((x) => x.icon)}@2x.png" alt=""/>
         <span class="fs-6 text-semibold">${main.temp}℃</span>
@@ -50,12 +50,12 @@ let print_result = (res) => {
       </div>
       <div class="card-4">
         <i class="fs-2 bi bi-water" ></i>
-        <span class="fs-6 fw-semibold">${main.humidity}hPa</span>
+        <span class="fs-6 fw-semibold">${main.pressure}hPa</span>
         <span class="fw-lighter text-secondary" >Humidity</span>
       </div>
       <div class="card-5">
         <i class="fs-2 bi bi-sunrise" ></i>
-        <span class="fs-6 fw-semibold">${sys.sunrise}hPa</span>
+        <span class="fs-6 fw-semibold">${sys.sunrise}</span>
         <span class="fw-lighter text-secondary" >Sunrise</span>
       </div>
       <div class="card-6">
@@ -71,4 +71,12 @@ let print_result = (res) => {
 
 let print_error = () => {
   return (results.innerHTML = `<h4 class="text-center mt-3">No city found</h4>`);
+};
+
+let hour_converter = (input, timezone) => {
+  return dayjs
+    .unix(input)
+    .utc()
+    .utcOffset(timezone / 3600)
+    .format("h : mm A");
 };
