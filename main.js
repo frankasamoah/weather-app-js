@@ -81,7 +81,7 @@ let print_result = (res) => {
 };
 
 let print_error = () => {
-  return (results.innerHTML = `<h4 class="text-center mt-3">no city found</h4>`);
+  return (results.innerHTML = `<h4 class="text-center mt-3">No city found</h4>`);
 };
 
 let hour_converter = (input, timezone) => {
