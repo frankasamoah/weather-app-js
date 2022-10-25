@@ -7,6 +7,9 @@ body {
   display: grid;
   place-content: center;
   height: 100vh;
+  background-image: url('./pexels-eberhard-grossgasteiger-2310713.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #app {
